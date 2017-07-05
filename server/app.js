@@ -24,4 +24,4 @@ app.listen(port, (res) => {
 });
 
 
-moudule.exports = {mongooseDB};
+module.exports = {mongooseDB};

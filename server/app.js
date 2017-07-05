@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+var mongooseDB =  require('mongoose');
+mongooseDB.Promise =  global.Promise;
+mongooseDB.connect('mongodb://<dbuser>:<dbpassword>@ds149412.mlab.com:49412/demo');
+
 
 
 var app = express();
@@ -18,3 +22,6 @@ app.use(expressValidator());
 app.listen(port, (res) => {
   console.log(`App started at port :: ${port} !`);
 });
+
+
+moudule.exports = {mongooseDB};
